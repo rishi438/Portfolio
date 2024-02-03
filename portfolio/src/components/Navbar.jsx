@@ -11,11 +11,11 @@ const Navbar = () => {
       >
         <p className="red-gradient-text">XeNn</p>
       </NavLink>
-      <nav className="flex text-lg gap-7 font medium">
-        <NavLink to="/about" className={({ isActive }) => (isActive ? 'text-red-500' : 'text-black')}>
+      <nav className="flex text-lg gap-7 font-medium">
+        <NavLink to="/about" className={({ isActive }) => (isActive ? 'text-red-500' : 'text-slate-800')}>
           About
         </NavLink>
-        <NavLink to="/projects" className={({ isActive }) => (isActive ? 'text-red-500' : 'text-black')}>
+        <NavLink to="/projects" className={({ isActive }) => (isActive ? 'text-red-500' : 'text-slate-800')}>
           Projects
         </NavLink>
       </nav>
