@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Work+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Philosopher:ital,wght@0,400;0,700;1,400&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -10,7 +10,7 @@
 }
 
 body {
-  font-family: 'Work Sans', sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 
 body:has(.card[data-color='blue']:hover) {
@@ -66,7 +66,7 @@ body:has(.card[data-color='green']:hover) {
   }
 
   .info-box {
-    @apply mx-5 relative flex text-white flex-col gap-3 max-w-2xl neo-brutalism-blue pt-4 pb-12 px-8;
+    @apply mx-3 relative flex text-white flex-col gap-2 max-w-2xl neo-brutalism-red pt-4 pb-12 px-4;
   }
 
   .neo-btn {
@@ -170,17 +170,18 @@ body:has(.card[data-color='green']:hover) {
 }
 
 /* Neo Brutalism */
-.neo-brutalism-blue {
-  background: #2b77e7;
+.neo-brutalism-red {
+  font-family: 'Philosopher';
+  background: #ef2727;
   position: relative;
-  border-radius: 10px;
-  border: #2b77e7;
+  border-radius: 11px;
+  border: #e72b2b;
   box-shadow:
-    0.6vmin 0.6vmin #336cc1,
-    1vmin 1vmin #0092db,
-    1vmin 1vmin #0092db,
-    0.65vmin 1vmin #0092db,
-    1vmin 0.65vmin #0092db;
+    0.6vmin 0.6vmin #c00716,
+    1vmin 1vmin #c00716,
+    1vmin 1vmin #c00716,
+    0.65vmin 1vmin #c00716,
+    1vmin 0.65vmin #b6000f;
 }
 
 .neo-brutalism-white {

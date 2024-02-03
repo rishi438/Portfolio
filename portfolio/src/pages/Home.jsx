@@ -8,12 +8,8 @@ import Bird from '../models/Bird';
 import Plane from '../models/Plane';
 import Plane_II from '../models/Plane_II';
 import { PLANE_TRAITS } from '../utils/constant';
-{
-  /* <div className='absolute top-28 left-0 right-0 z-10 flex
- items-center justify-center'>
-    PopUp
-</div> */
-}
+import HomeInfo from '../components/HomeInfo';
+
 const Home = () => {
   const [is_rotating, set_is_rotating] = useState(false);
   const [current_stage, set_current_stage] = useState(1);
@@ -48,6 +44,13 @@ const Home = () => {
   const [plane_II_scale, plane_II_position, plane_II_rotation] = adjust_plane_screen_size(PLANE_TRAITS['PLANE_II']);
   return (
     <section className="w-full h-screen relative">
+      <div
+        className="absolute top-28 left-0 right-0 z-10 flex
+       items-center justify-center"
+      >
+        {current_stage && <HomeInfo current_stage={current_stage} />}
+      </div>
+
       <Canvas
         className={`w-full h-screen bg-transparent ${is_rotating ? 'cursor-grabbing' : 'cursor-grab'}`}
         camera={{ near: 0.1, far: 1000 }}
@@ -58,6 +61,12 @@ const Home = () => {
           <hemisphereLight skyColor="#b1e1ff" groundColor="#000000" />
           <Bird />
           <Sky is_rotating={is_rotating} />
+          <Plane_II
+            is_rotating={is_rotating}
+            scale={plane_II_scale}
+            position={plane_II_position}
+            rotation={plane_II_rotation}
+          />
           <Island
             position={island_position}
             scale={island_scale}
@@ -71,12 +80,6 @@ const Home = () => {
             scale={plane_I_scale}
             position={plane_I_position}
             rotation={plane_I_rotation}
-          />
-          <Plane_II
-            is_rotating={is_rotating}
-            scale={plane_II_scale}
-            position={plane_II_position}
-            rotation={plane_II_rotation}
           />
         </Suspense>
       </Canvas>
