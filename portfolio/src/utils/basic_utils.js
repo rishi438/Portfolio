@@ -162,32 +162,32 @@ export const experiences = [
 export const socialLinks = [
   {
     name: "Contact",
-    iconUrl: contact,
+    icon_url: contact,
     link: "/contact",
   },
   {
     name: "GitHub",
-    iconUrl: github,
+    icon_url: github,
     link: "https://github.com/YourGitHubUsername",
   },
   {
     name: "LinkedIn",
-    iconUrl: linkedin,
+    icon_url: linkedin,
     link: "https://www.linkedin.com/in/YourLinkedInUsername",
   },
 ];
 
 export const projects = [
   {
-    iconUrl: application,
+    icon_url: application,
     theme: "btn-back-red",
     name: "Social Network",
     description:
-      "Developed a web application that connects people on social media using Vue.js, postgres and Django",
+      "Developed a web application similar to Facebook using Vue.js, postgres and Django",
     link: "https://github.com/rishi438/django-vue",
   },
   {
-    iconUrl: application,
+    icon_url: application,
     theme: "btn-back-green",
     name: "Flask",
     description:
@@ -195,7 +195,7 @@ export const projects = [
     link: "https://github.com/rishi438/flask",
   },
   {
-    iconUrl: application,
+    icon_url: application,
     theme: "btn-back-blue",
     name: "user Management",
     description:
@@ -203,7 +203,7 @@ export const projects = [
     link: "https://github.com/rishi438/User-Management ",
   },
   {
-    iconUrl: application,
+    icon_url: application,
     theme: "btn-back-blue",
     name: "Basic Go Web Application",
     description: "A basic Go webserver that hooks to web",

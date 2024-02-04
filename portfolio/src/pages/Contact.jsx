@@ -1,10 +1,10 @@
 // @ts-nocheck
 import { useState, useRef, Suspense } from "react";
 import { Canvas } from "@react-three/fiber";
+import { GECKO_TRAITS } from "../utils/constant";
 import emailjs from "@emailjs/browser";
 import Gecko from "../models/gecko";
 import Loader from "../components/Loader";
-import { GECKO_TRAITS } from "../utils/constant";
 import useAlert from "../hooks/useAlert";
 import Alert from "../components/Alert";
 
@@ -14,6 +14,15 @@ const Contact = () => {
   const [is_loading, set_is_loading] = useState(false);
   const [current_anime, set_current_anime] = useState("FG_Idle_A");
   const { alert, show_alert, hide_alert } = useAlert();
+  let width;
+
+  if (innerWidth < 576) {
+    width = "576";
+  } else if (innerWidth < 768 && innerWidth > 576) {
+    width = "768";
+  } else {
+    width = "M768";
+  }
   const handle_change = (e) => {
     set_form({ ...form, [e.target.name]: e.target.value });
   };
@@ -70,7 +79,7 @@ const Contact = () => {
       });
   };
   return (
-    <section className="contact relative flex lg:flex-row flex-col max-container min-h-full">
+    <section className="contact relative flex lg:flex-row flex-col max-container">
       {alert.show && <Alert {...alert} />}
       <div className="flex-1 min-w-[50%] flex flex-col">
         <h1 className="head-text">Get in Touch</h1>
@@ -137,9 +146,9 @@ const Contact = () => {
           <Suspense fallback={<Loader />}>
             <directionalLight position={[0.5, 0.8, 1.1]} intensity={6.5} />
             <Gecko
-              position={GECKO_TRAITS["POSITION"]}
-              scale={GECKO_TRAITS["SCALE"]}
-              rotation={GECKO_TRAITS["ROTATION"]}
+              position={GECKO_TRAITS[width]["POSITION"]}
+              scale={GECKO_TRAITS[width]["SCALE"]}
+              rotation={GECKO_TRAITS[width]["ROTATION"]}
               current_anime={current_anime}
               set_current_anime={set_current_anime}
             />

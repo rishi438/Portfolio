@@ -1,13 +1,13 @@
 // @ts-nocheck
 import { Suspense, useState } from "react";
 import { Canvas } from "@react-three/fiber";
+import { PLANE_TRAITS } from "../utils/constant";
 import Loader from "../components/Loader";
 import Island from "../models/island";
 import Sky from "../models/Sky";
 import Bird from "../models/Bird";
 import Plane from "../models/Plane";
 import Plane_II from "../models/Plane_II";
-import { PLANE_TRAITS } from "../utils/constant";
 import HomeInfo from "../components/HomeInfo";
 
 const Home = () => {
