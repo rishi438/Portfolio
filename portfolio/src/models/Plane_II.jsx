@@ -1,20 +1,16 @@
 // @ts-nocheck
 
-import { useEffect, useRef } from 'react';
-import PlaneScene from '../assets/3d/flying_circus.glb';
-import { useAnimations, useGLTF } from '@react-three/drei';
-import { useFrame } from '@react-three/fiber';
+import { useEffect, useRef } from "react";
+import PlaneScene from "../assets/3d/flying_circus.glb";
+import { useAnimations, useGLTF } from "@react-three/drei";
+import { useFrame } from "@react-three/fiber";
 
 const Plane_II = ({ is_rotating, ...props }) => {
   const { scene, animations } = useGLTF(PlaneScene);
   const plane_2_ref = useRef();
   const { actions } = useAnimations(animations, plane_2_ref);
   useEffect(() => {
-    actions['Dynamic pose'].play();
-    // if (is_rotating) {
-    // } else {
-    //   actions['Dynamic pose'].stop();
-    // }
+    actions["Dynamic pose"].play();
   });
   useFrame(({ clock, camera }, delta) => {
     const speed = 0.25;
@@ -24,7 +20,6 @@ const Plane_II = ({ is_rotating, ...props }) => {
     const center_z = camera.position.z - 43;
 
     const angle = clock.elapsedTime * speed;
-    console.log(clock.elapsedTime * 0.2);
 
     const new_x = center_x - Math.cos(angle) * radius;
     const new_z = center_z - Math.sin(angle) * radius;

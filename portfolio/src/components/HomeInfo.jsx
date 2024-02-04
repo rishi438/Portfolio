@@ -1,6 +1,6 @@
 // @ts-nocheck
-import { Link } from 'react-router-dom';
-import { arrow } from '../assets/icons';
+import { Link } from "react-router-dom";
+import { arrow } from "../assets/icons";
 
 const InfoBox = ({ text, link, btn_text }) => {
   return (
@@ -22,7 +22,7 @@ const render_content = {
     >
       Hi, I am
       <span className="font-medium"> Rishi Karan Reddy</span> 🖖
-      <br />A Full Stack Developer from india
+      <br />A Full Stack Developer from India
     </h1>
   ),
   2: (

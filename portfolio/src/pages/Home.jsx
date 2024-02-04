@@ -1,14 +1,14 @@
 // @ts-nocheck
-import { Suspense, useState } from 'react';
-import { Canvas } from '@react-three/fiber';
-import Loader from '../components/Loader';
-import Island from '../models/island';
-import Sky from '../models/Sky';
-import Bird from '../models/Bird';
-import Plane from '../models/Plane';
-import Plane_II from '../models/Plane_II';
-import { PLANE_TRAITS } from '../utils/constant';
-import HomeInfo from '../components/HomeInfo';
+import { Suspense, useState } from "react";
+import { Canvas } from "@react-three/fiber";
+import Loader from "../components/Loader";
+import Island from "../models/island";
+import Sky from "../models/Sky";
+import Bird from "../models/Bird";
+import Plane from "../models/Plane";
+import Plane_II from "../models/Plane_II";
+import { PLANE_TRAITS } from "../utils/constant";
+import HomeInfo from "../components/HomeInfo";
 
 const Home = () => {
   const [is_rotating, set_is_rotating] = useState(false);
@@ -27,21 +27,22 @@ const Home = () => {
   const adjust_plane_screen_size = (PLANE_TRAITS) => {
     let screen_scale, screen_position, width, rotation;
     if (innerWidth < 576) {
-      width = '576';
+      width = "576";
     } else if (innerWidth < 768 && innerWidth > 576) {
-      width = '768';
+      width = "768";
     } else {
-      width = 'M768';
+      width = "M768";
     }
-    console.log(width);
-    screen_scale = PLANE_TRAITS[width]['SCALE'];
-    screen_position = PLANE_TRAITS[width]['POSITION'];
-    rotation = PLANE_TRAITS[width]['ROTATION'];
+    screen_scale = PLANE_TRAITS[width]["SCALE"];
+    screen_position = PLANE_TRAITS[width]["POSITION"];
+    rotation = PLANE_TRAITS[width]["ROTATION"];
     return [screen_scale, screen_position, rotation];
   };
   const [island_scale, island_position, rotation] = adjust_island_screen_size();
-  const [plane_I_scale, plane_I_position, plane_I_rotation] = adjust_plane_screen_size(PLANE_TRAITS['PLANE_I']);
-  const [plane_II_scale, plane_II_position, plane_II_rotation] = adjust_plane_screen_size(PLANE_TRAITS['PLANE_II']);
+  const [plane_I_scale, plane_I_position, plane_I_rotation] =
+    adjust_plane_screen_size(PLANE_TRAITS["PLANE_I"]);
+  const [plane_II_scale, plane_II_position, plane_II_rotation] =
+    adjust_plane_screen_size(PLANE_TRAITS["PLANE_II"]);
   return (
     <section className="w-full h-screen relative">
       <div
@@ -52,7 +53,7 @@ const Home = () => {
       </div>
 
       <Canvas
-        className={`w-full h-screen bg-transparent ${is_rotating ? 'cursor-grabbing' : 'cursor-grab'}`}
+        className={`w-full h-screen bg-transparent ${is_rotating ? "cursor-grabbing" : "cursor-grab"}`}
         camera={{ near: 0.1, far: 1000 }}
       >
         <Suspense fallback={<Loader />}>

@@ -1,11 +1,11 @@
 default_language_version:
-  node: '18.2.0'
+  node: "18.2.0"
 repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v4.5.0
     hooks:
       - id: check-added-large-files
-        args: ['--maxkb=10024']
+        args: ["--maxkb=15024"]
       - id: check-ast
       - id: trailing-whitespace
       - id: check-docstring-first
@@ -29,4 +29,3 @@ repos:
     hooks:
       - id: prettier
         files: '\.(css|less|scss|ts|tsx|graphql|gql|json|js|jsx|md|yaml|yml|html)$'
-        args: ['--write', '--print-width=120', '--single-quote', '--trailing-comma=es5']
