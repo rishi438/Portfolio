@@ -1,15 +1,16 @@
 // @ts-nocheck
-import { useAnimations, useGLTF } from '@react-three/drei';
-import birdScene from '../assets/3d/bird.glb';
-import { useEffect, useRef } from 'react';
-import { useFrame } from '@react-three/fiber';
+import { useAnimations, useGLTF } from "@react-three/drei";
+import birdScene from "../assets/3d/bird.glb";
+import { useEffect, useRef } from "react";
+import { useFrame } from "@react-three/fiber";
 
 const Bird = () => {
   const { scene, animations } = useGLTF(birdScene);
   const bird_ref = useRef();
   const { actions } = useAnimations(animations, bird_ref);
+  console.log(actions);
   useEffect(() => {
-    actions['Take 001'].play();
+    actions["Take 001"].play();
   }, []);
   useFrame(({ clock, camera }) => {
     bird_ref.current.position.y = Math.sin(clock.elapsedTime) * 0.015 + 2;
