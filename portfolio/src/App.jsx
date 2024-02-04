@@ -1,11 +1,11 @@
 // @ts-nocheck
-import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
-import Navbar from './components/navbar';
-import { Home, About, Projects, Contact } from './pages';
+import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
+import Navbar from "./components/navbar";
+import { Home, About, Projects, Contact } from "./pages";
 
 const App = () => {
   return (
-    <div className="bg-slate-300/20">
+    <div className="bg-slate-300/20 h-[100vh]">
       <Router>
         <Navbar />
         <Routes>
