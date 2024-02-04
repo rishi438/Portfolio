@@ -1,8 +1,15 @@
 // @ts-nocheck
-import { skills } from "../utils/basic_utils";
+import { skills, experiences } from "../utils/basic_utils";
+import {
+  VerticalTimeline,
+  VerticalTimelineElement,
+} from "react-vertical-timeline-component";
+import "react-vertical-timeline-component/style.min.css";
+import CTA from "../components/CTA";
+
 const Home = () => {
   return (
-    <section className="font-family-poppins max-container">
+    <section className="font-poppins max-container">
       <h1 className="head-text">
         Hello, I'm{" "}
         <span
@@ -45,6 +52,73 @@ const Home = () => {
           ))}
         </div>
       </div>
+      <div className="cpy-16">
+        <h3 className="subhead-text">Work Experience</h3>
+        <div className=" mt-5 flex flex-col gap-3 text-stone-500">
+          <p>
+            Throughout my journey, I've had the privilege of collaborating with
+            esteemed companies, where I've honed my skills and had the pleasure
+            of working alongside brilliant minds. Here's a snapshot of my
+            professional engagements:
+          </p>
+        </div>
+        <div className="mt-12">
+          <VerticalTimeline>
+            {experiences.map((experience) => (
+              <VerticalTimelineElement
+                key={experience.company_name}
+                date={experience.date}
+                icon={
+                  <div className="flex justify-center items-center w-full h-full">
+                    <img
+                      src={experience.icon}
+                      alt={experience.company_name}
+                      className="rounded-full object-contain"
+                    />
+                  </div>
+                }
+                iconStyle={{
+                  background: experience.iconBg,
+                }}
+                contentStyle={{
+                  borderBottom: "8px",
+                  borderStyle: "solid",
+                  borderBottomColor: experience.iconBg,
+                  boxShadow: "none",
+                }}
+              >
+                <div>
+                  <h3
+                    className="text-black text-xl font-poppins
+                      font-medium"
+                  >
+                    {experience.title}
+                  </h3>
+                  <p
+                    className="text-stone-500 font-medium font-base"
+                    style={{ margin: 0 }}
+                  >
+                    {experience.company_name}
+                  </p>
+                </div>
+                <ul className="my-5 list-disc ml-5 space-y-2">
+                  {experience.points.map((point, index) => (
+                    <li
+                      key={index}
+                      className="text-black-500/50 font-normal pl-1
+                        text-sm"
+                    >
+                      {point}
+                    </li>
+                  ))}
+                </ul>
+              </VerticalTimelineElement>
+            ))}
+          </VerticalTimeline>
+        </div>
+      </div>
+      <hr className="border-slate-200" />
+      <CTA />
     </section>
   );
 };
