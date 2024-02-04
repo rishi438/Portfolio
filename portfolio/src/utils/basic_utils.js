@@ -27,104 +27,104 @@ import { wizklub, infinity_learn } from "../assets/work";
 
 export const skills = [
   {
-    imageUrl: python,
+    image_url: python,
     name: "Python",
     type: "Backend",
   },
   {
-    imageUrl: flask,
+    image_url: flask,
     name: "Flask",
     type: "Backend",
   },
   {
-    imageUrl: django,
+    image_url: django,
     name: "django",
     type: "Backend",
   },
   {
-    imageUrl: vue,
+    image_url: vue,
     name: "Vue",
     type: "Frontend",
   },
   {
-    imageUrl: docker,
+    image_url: docker,
     name: "Docker",
     type: "Backend",
   },
   {
-    imageUrl: nginx,
+    image_url: nginx,
     name: "Nginx",
     type: "Proxy",
   },
   {
-    imageUrl: postgres,
+    image_url: postgres,
     name: "Postgres",
     type: "Database",
   },
   {
-    imageUrl: bootstrap,
-    name: "Bootstrap",
-    type: "Frontend",
-  },
-  {
-    imageUrl: aws,
-    name: "AWS",
-    type: "Deployment",
-  },
-  {
-    imageUrl: express,
-    name: "Express",
-    type: "Backend",
-  },
-  {
-    imageUrl: git,
-    name: "Git",
-    type: "Version Control",
-  },
-  {
-    imageUrl: github,
-    name: "GitHub",
-    type: "Version Control",
-  },
-  {
-    imageUrl: html,
-    name: "HTML",
-    type: "Frontend",
-  },
-  {
-    imageUrl: css,
-    name: "CSS",
-    type: "Frontend",
-  },
-  {
-    imageUrl: javascript,
-    name: "JavaScript",
-    type: "Frontend",
-  },
-  {
-    imageUrl: mongodb,
+    image_url: mongodb,
     name: "MongoDB",
     type: "Database",
   },
   {
-    imageUrl: nextjs,
-    name: "Next.js",
-    type: "Frontend",
-  },
-  {
-    imageUrl: nodejs,
-    name: "Node.js",
-    type: "Backend",
-  },
-  {
-    imageUrl: react,
+    image_url: react,
     name: "React",
     type: "Frontend",
   },
   {
-    imageUrl: tailwindcss,
+    image_url: tailwindcss,
     name: "Tailwind CSS",
     type: "Frontend",
+  },
+  {
+    image_url: bootstrap,
+    name: "Bootstrap",
+    type: "Frontend",
+  },
+  {
+    image_url: aws,
+    name: "AWS",
+    type: "Deployment",
+  },
+  {
+    image_url: express,
+    name: "Express",
+    type: "Backend",
+  },
+  {
+    image_url: git,
+    name: "Git",
+    type: "Version Control",
+  },
+  {
+    image_url: github,
+    name: "GitHub",
+    type: "Version Control",
+  },
+  {
+    image_url: html,
+    name: "HTML",
+    type: "Frontend",
+  },
+  {
+    image_url: css,
+    name: "CSS",
+    type: "Frontend",
+  },
+  {
+    image_url: javascript,
+    name: "JavaScript",
+    type: "Frontend",
+  },
+  {
+    image_url: nextjs,
+    name: "Next.js",
+    type: "Frontend",
+  },
+  {
+    image_url: nodejs,
+    name: "Node.js",
+    type: "Backend",
   },
 ];
 
