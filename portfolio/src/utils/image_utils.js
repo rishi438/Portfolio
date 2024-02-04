@@ -22,7 +22,6 @@ import {
   nodejs,
   react,
   tailwindcss,
-  typescript,
 } from "../assets/icons";
 import { wizklub, infinity_learn } from "../assets/work";
 
@@ -125,11 +124,6 @@ export const skills = [
   {
     imageUrl: tailwindcss,
     name: "Tailwind CSS",
-    type: "Frontend",
-  },
-  {
-    imageUrl: typescript,
-    name: "TypeScript",
     type: "Frontend",
   },
 ];

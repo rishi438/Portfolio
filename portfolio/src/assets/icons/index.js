@@ -1,30 +1,29 @@
 import css from "./css.svg";
-import application from "../assets/icons/application.svg";
-import python from "../assets/icons/python.svg";
-import flask from "../assets/icons/flask.svg";
-import django from "../assets/icons/django.svg";
-import vue from "../assets/icons/vue.svg";
-import docker from "../assets/icons/docker.svg";
-import nginx from "../assets/icons/nginx.svg";
-import postgres from "../assets/icons/postgres.svg";
-import bootstrap from "../assets/icons/bootstrap.svg";
-import aws from "../assets/icons/aws.svg";
-import express from "../assets/icons/express.svg";
-import git from "../assets/icons/git.svg";
-import github from "../assets/icons/github.svg";
-import html from "../assets/icons/html.svg";
-import javascript from "../assets/icons/javascript.svg";
-import mongodb from "../assets/icons/mongodb.svg";
-import nextjs from "../assets/icons/nextjs.svg";
-import nodejs from "../assets/icons/nodejs.svg";
-import react from "../assets/icons/react.svg";
-import tailwindcss from "../assets/icons/tailwindcss.svg";
-import typescript from "../assets/icons/typescript.svg";
-import linkedin from "../assets/icons/linkedin.svg";
-import arrow from "../assets/icons/arrow.svg";
-import contact from "../assets/icons/contact.svg";
-import soundon from "../assets/icons/soundon.png";
-import soundoff from "../assets/icons/soundoff.png";
+import application from "./application.svg";
+import python from "./python.svg";
+import flask from "./flask.svg";
+import django from "./django.svg";
+import vue from "./vue.svg";
+import docker from "./docker.svg";
+import nginx from "./nginx.svg";
+import postgres from "./postgres.svg";
+import bootstrap from "./bootstrap.svg";
+import aws from "./aws.svg";
+import express from "./express.svg";
+import git from "./git.svg";
+import github from "./github.svg";
+import html from "./html.svg";
+import javascript from "./javascript.svg";
+import mongodb from "./mongodb.svg";
+import nextjs from "./nextjs.svg";
+import nodejs from "./nodejs.svg";
+import react from "./react.svg";
+import tailwindcss from "./tailwindcss.svg";
+import linkedin from "./linkedin.svg";
+import arrow from "./arrow.svg";
+import contact from "./contact.svg";
+import soundon from "./soundon.png";
+import soundoff from "./soundoff.png";
 
 export {
   application,
@@ -48,7 +47,6 @@ export {
   nodejs,
   react,
   tailwindcss,
-  typescript,
   linkedin,
   arrow,
   contact,
