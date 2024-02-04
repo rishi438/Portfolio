@@ -10,24 +10,24 @@ import Alert from "../components/Alert";
 
 const Contact = () => {
   const form_ref = useRef(null);
-  const [form, setForm] = useState({ name: "", email: "", message: "" });
+  const [form, set_form] = useState({ name: "", email: "", message: "" });
   const [is_loading, set_is_loading] = useState(false);
   const [current_anime, set_current_anime] = useState("FG_Idle_A");
-
   const { alert, show_alert, hide_alert } = useAlert();
   const handle_change = (e) => {
-    setForm({ ...form, [e.target.name]: e.target.value });
+    set_form({ ...form, [e.target.name]: e.target.value });
   };
   const handle_focus = (e) => {
     set_current_anime("FG_Idle_Qualification03_A");
-    console.log(
-      import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY,
-      import.meta.env.VITE_APP_EMAILJS_SERVICE_ID,
-      import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID,
-    );
   };
   const handle_blur = (e) => {
     set_current_anime("FG_Idle_A");
+  };
+  const handle_email_focus = (e) => {
+    set_current_anime("FG_Idle_Qualification04_A");
+  };
+  const handle_ta_focus = (e) => {
+    set_current_anime("FG_Walk_Right_A");
   };
   const handle_submit = (e) => {
     e.preventDefault();
@@ -55,7 +55,7 @@ const Contact = () => {
         });
         setTimeout(() => {
           set_current_anime("FG_Idle_A");
-          setForm({ name: "", email: "", message: "" });
+          set_form({ name: "", email: "", message: "" });
         }, 2000);
       })
       .catch((e) => {
@@ -70,7 +70,7 @@ const Contact = () => {
       });
   };
   return (
-    <section className="relative flex lg:flex-row flex-col max-container min-h-full">
+    <section className="contact relative flex lg:flex-row flex-col max-container min-h-full">
       {alert.show && <Alert {...alert} />}
       <div className="flex-1 min-w-[50%] flex flex-col">
         <h1 className="head-text">Get in Touch</h1>
@@ -103,7 +103,7 @@ const Contact = () => {
               required
               value={form.email}
               onChange={handle_change}
-              onFocus={handle_focus}
+              onFocus={handle_email_focus}
               onBlur={handle_blur}
             />
           </label>
@@ -117,7 +117,7 @@ const Contact = () => {
               required
               value={form.message}
               onChange={handle_change}
-              onFocus={handle_focus}
+              onFocus={handle_ta_focus}
               onBlur={handle_blur}
             />
           </label>

@@ -194,3 +194,12 @@ body:has(.card[data-color="green"]:hover) {
     0.65vmin 1vmin #d2e4ff,
     1vmin 0.65vmin #d2e4ff;
 }
+.contact {
+  user-select: none;
+}
+.font-family-poppins {
+  font-family: "Poppins";
+}
+.font-family-philosopher {
+  font-family: "Philosopher";
+}
