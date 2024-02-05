@@ -1,5 +1,5 @@
 // @ts-nocheck
-import { Suspense, useState } from "react";
+import { Suspense, useState, useEffect, useRef } from "react";
 import { Canvas } from "@react-three/fiber";
 import { PLANE_TRAITS } from "../utils/constant";
 import Loader from "../components/Loader";
@@ -9,10 +9,24 @@ import Bird from "../models/Bird";
 import Plane from "../models/Plane";
 import Plane_II from "../models/Plane_II";
 import HomeInfo from "../components/HomeInfo";
+import suzume from "../assets/audio/suzume.mp3";
+import { soundon, soundoff } from "../assets/icons";
 
 const Home = () => {
+  const audio_ref = useRef(new Audio(suzume));
+  audio_ref.current.volume = 0.4;
+  audio_ref.current.loop = true;
   const [is_rotating, set_is_rotating] = useState(false);
   const [current_stage, set_current_stage] = useState(1);
+  const [is_playing_music, set_playing_music] = useState(false);
+  useEffect(() => {
+    if (is_playing_music) {
+      audio_ref.current.play();
+    }
+    return () => {
+      audio_ref.current.pause();
+    };
+  }, [is_playing_music]);
   const adjust_island_screen_size = () => {
     let screen_scale;
     let screen_position = [0, -6.5, -43];
@@ -84,6 +98,14 @@ const Home = () => {
           />
         </Suspense>
       </Canvas>
+      <div className="absolute bottom-2 left-2">
+        <img
+          src={!is_playing_music ? soundoff : soundon}
+          alt="sound"
+          className="w-10 h-10 cursor-pointer object-contain"
+          onClick={() => set_playing_music(!is_playing_music)}
+        />
+      </div>
     </section>
   );
 };

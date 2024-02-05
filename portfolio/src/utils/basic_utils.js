@@ -159,7 +159,7 @@ export const experiences = [
   },
 ];
 
-export const socialLinks = [
+export const social_links = [
   {
     name: "Contact",
     icon_url: contact,
@@ -173,7 +173,7 @@ export const socialLinks = [
   {
     name: "LinkedIn",
     icon_url: linkedin,
-    link: "https://www.linkedin.com/in/YourLinkedInUsername",
+    link: "https://www.linkedin.com/in/rishi-karan-reddy-t-77633b173/",
   },
 ];
 

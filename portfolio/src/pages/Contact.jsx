@@ -65,6 +65,7 @@ const Contact = () => {
         setTimeout(() => {
           set_current_anime("FG_Idle_A");
           set_form({ name: "", email: "", message: "" });
+          hide_alert(false);
         }, 2000);
       })
       .catch((e) => {
@@ -75,7 +76,6 @@ const Contact = () => {
           type: "danger",
         });
         set_current_anime("FG_Idle_Qualification05_A");
-        // TODO: Show error message
       });
   };
   return (
