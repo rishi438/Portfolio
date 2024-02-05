@@ -59,20 +59,20 @@ const Contact = () => {
         set_is_loading(false);
         show_alert({
           show: true,
-          text: "Message sent successfully",
+          text: "Thank you for reaching out to me! 😌",
           type: "success",
         });
         setTimeout(() => {
+          hide_alert(false);
           set_current_anime("FG_Idle_A");
           set_form({ name: "", email: "", message: "" });
-          hide_alert(false);
         }, 2000);
       })
       .catch((e) => {
         set_is_loading(false);
         show_alert({
           show: true,
-          text: "Seems there is some issue. Try after sometime",
+          text: "Seems there is some issue 😨. Try after sometime!",
           type: "danger",
         });
         set_current_anime("FG_Idle_Qualification05_A");

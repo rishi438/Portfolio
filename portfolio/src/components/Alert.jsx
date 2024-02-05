@@ -1,5 +1,4 @@
-import React from "react";
-
+// @ts-nocheck
 const Alert = ({ type, text }) => {
   return (
     <div
@@ -7,7 +6,7 @@ const Alert = ({ type, text }) => {
             justify-center items-center"
     >
       <div
-        className={`${type === "danger" ? "bg-red-600" : "bg-emerald-600"} p-2 text-indigo-100 leading-none
+        className={`${type === "danger" ? "bg-red-600" : "bg-emerald-600"} p-2 rounded-full text-indigo-100 leading-none
                 lg:rounded-full flex lg:inline-flex justify-center items-center`}
         role="alert"
       >

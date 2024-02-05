@@ -15,7 +15,7 @@ const useAlert = () => {
     });
   const hide_alert = ({ text, type = "danger" }) =>
     set_alert({
-      show: true,
+      show: false,
       text: "",
       type: "danger",
     });
