@@ -206,7 +206,7 @@ export const projects = [
     icon_url: application,
     theme: "btn-back-blue",
     name: "Basic Go Web Application",
-    description: "A basic Go webserver that hooks to web",
+    description: "A basic Go webserver that hooks to web API hook",
     link: "https://github.com/rishi438/go_webserver",
   },
 ];
