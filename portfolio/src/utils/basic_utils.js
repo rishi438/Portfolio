@@ -134,7 +134,7 @@ export const experiences = [
     company_name: "Wizklub",
     icon: wizklub,
     iconBg: "#accbe1",
-    date: "March 2020 - April 2021",
+    date: "March 2022 - Sept 2023",
     points: [
       "Developing and maintaining web applications using flask, python and other related technologies.",
       "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
@@ -144,11 +144,11 @@ export const experiences = [
     ],
   },
   {
-    title: "React Native Developer",
-    company_name: "Tesla",
+    title: "Full Stack Developer",
+    company_name: "Infinity Learn",
     icon: infinity_learn,
     iconBg: "#fbc3bc",
-    date: "Jan 2021 - Feb 2022",
+    date: "Oct 2023 - Jan 2024",
     points: [
       "Developing and maintaining web applications using flask, python and other related technologies.",
       "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
@@ -168,7 +168,7 @@ export const social_links = [
   {
     name: "GitHub",
     icon_url: github,
-    link: "https://github.com/YourGitHubUsername",
+    link: "https://github.com/rishi438",
   },
   {
     name: "LinkedIn",

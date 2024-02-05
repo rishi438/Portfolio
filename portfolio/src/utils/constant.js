@@ -36,12 +36,12 @@ const PLANE_TRAITS = {
 };
 const GECKO_TRAITS = {
   576: {
-    POSITION: [0, -35, -10],
+    POSITION: [0, -43, -13],
     ROTATION: [-0.05, -0.2, -0.01],
-    SCALE: [5.5, 5.5, 5.5],
+    SCALE: [6.5, 6.5, 6.5],
   },
   768: {
-    POSITION: [0, -35, -10],
+    POSITION: [0, -37, -9],
     ROTATION: [-0.05, -0.2, -0.01],
     SCALE: [5.5, 5.5, 5.5],
   },
