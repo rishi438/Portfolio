@@ -94,12 +94,18 @@ const Island = ({
     canvas.addEventListener("pointerdown", handle_pointer_down);
     canvas.addEventListener("pointerup", handle_pointer_up);
     canvas.addEventListener("pointermove", handle_pointer_move);
+    canvas.addEventListener("touchstart", handle_pointer_down);
+    canvas.addEventListener("touchend", handle_pointer_up);
+    canvas.addEventListener("touchmove", handle_pointer_move);
     document.addEventListener("keydown", handle_key_down);
     document.addEventListener("keyup", handle_key_up);
     return () => {
       canvas.removeEventListener("pointerdown", handle_pointer_down);
       canvas.removeEventListener("pointerup", handle_pointer_up);
       canvas.removeEventListener("pointermove", handle_pointer_move);
+      canvas.removeEventListener("touchstart", handle_pointer_down);
+      canvas.removeEventListener("touchend", handle_pointer_up);
+      canvas.removeEventListener("touchmove", handle_pointer_move);
       document.removeEventListener("keydown", handle_key_down);
       document.removeEventListener("keyup", handle_key_up);
     };

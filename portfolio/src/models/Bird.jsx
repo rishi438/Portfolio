@@ -8,7 +8,6 @@ const Bird = () => {
   const { scene, animations } = useGLTF(birdScene);
   const bird_ref = useRef();
   const { actions } = useAnimations(animations, bird_ref);
-  console.log(actions);
   useEffect(() => {
     actions["Take 001"].play();
   }, []);
