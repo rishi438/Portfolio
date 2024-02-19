@@ -1,1 +1,1 @@
-### Persocal 3D Portfolio using React + Vite +ThreeJS + React-Fiber
+### Persocal 3D Portfolio using React + Vite  + React-Fiber-ThreeJS
